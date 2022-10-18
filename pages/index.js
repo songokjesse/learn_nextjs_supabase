@@ -72,7 +72,15 @@ export default function Home({categories,products}) {
                       {filtered.map(product => (
                           <div key={product.id}>
                               <div className="card card-compact w-96 bg-base-100 shadow-xl">
-                                  <figure><img src={product.thumbnail} alt="Shoes" className="scale-40 w-24 h-24" /></figure>
+                                  <figure>
+                                      <Image
+                                          src={product.thumbnail}
+                                          alt="Shoes"
+                                          className="scale-40 w-24 h-24"
+                                          width={100}
+                                          height={100}
+                                      />
+                                  </figure>
                                   <div className="card-body">
                                       <h2 className="card-title">{product.title}</h2>
                                       <p>{product.description}</p>
